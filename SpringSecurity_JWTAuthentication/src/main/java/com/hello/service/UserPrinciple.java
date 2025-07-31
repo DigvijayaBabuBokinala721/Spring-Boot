@@ -28,7 +28,7 @@ public class UserPrinciple implements UserDetails {
 		 return users.getRoles()
 			        .stream()
 			        .map(role -> new SimpleGrantedAuthority(role.getRole()))  // Ensure "ROLE_" prefix
-			        .collect(Collectors.toSet()); // ✅ New immutable list avoids concurrent modification
+			        .collect(Collectors.toSet()); 
 		
 	}
 
