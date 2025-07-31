@@ -27,7 +27,7 @@ public class UserPrinciple implements UserDetails {
 //		return null;
 		 return users.getRoles()
 			        .stream()
-			        .map(role -> new SimpleGrantedAuthority(role.getRole()))  // Ensure "ROLE_" prefix
+			        .map(role -> new SimpleGrantedAuthority(role.getRole()))
 			        .collect(Collectors.toSet()); 
 		
 	}
