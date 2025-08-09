@@ -37,13 +37,13 @@ public class Person {
 	@NonNull
 	private String email;
 
-	@OneToOne(targetEntity = Aadhaar.class,cascade = CascadeType.ALL)
+	@OneToOne(targetEntity = Aadhaar.class,cascade = CascadeType.ALL,mappedBy = "person")
 	@NonNull
 	private Aadhaar aadhaar;
 	
 	
 	
-	@OneToMany(targetEntity = BankAccount.class,cascade = CascadeType.ALL)
+	@OneToMany(targetEntity = BankAccount.class,cascade = CascadeType.ALL,mappedBy = "person")
 	@NonNull
 	private List<BankAccount> bankAccount;
 	

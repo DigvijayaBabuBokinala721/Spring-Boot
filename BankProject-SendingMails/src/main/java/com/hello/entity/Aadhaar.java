@@ -18,8 +18,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @NoArgsConstructor
 public class Aadhaar {
-	@SequenceGenerator(name = "gen1",sequenceName = "sequ2",initialValue = 1,allocationSize = 1)
-	@GeneratedValue(generator = "gen1",strategy = GenerationType.SEQUENCE)
+	@SequenceGenerator(name = "gen2",sequenceName = "sequ2",initialValue = 1,allocationSize = 1)
+	@GeneratedValue(generator = "gen2",strategy = GenerationType.SEQUENCE)
 	@Id
 	private Integer id;
 	@NonNull

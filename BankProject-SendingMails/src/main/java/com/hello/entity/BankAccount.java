@@ -23,7 +23,7 @@ import lombok.RequiredArgsConstructor;
 @NoArgsConstructor
 public class BankAccount {
 
-	@SequenceGenerator(name = "gen3",sequenceName = "sequ3",initialValue = 1,allocationSize = 1)
+	@SequenceGenerator(name = "gen3",sequenceName = "bk_seq",initialValue = 123456,allocationSize = 15)
 	@GeneratedValue(generator = "gen3",strategy = GenerationType.SEQUENCE)
 	@Id
 	private long accNo;

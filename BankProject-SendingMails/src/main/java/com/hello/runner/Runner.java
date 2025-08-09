@@ -15,19 +15,23 @@ import com.hello.service.IpersonService;
 public class Runner implements CommandLineRunner {
 
 	@Autowired
-	private IpersonService is;
+	private IpersonService ipersonService;
 	
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Aadhaar aadhaar = new Aadhaar(123l);
-		BankAccount bk = new BankAccount(1_90_000.,"savings");
-		Person person1 = new Person("chinnu","vijaycpye@gmail.com",aadhaar,List.of(bk));
+		Aadhaar aadhaar = new Aadhaar(766170001234l); //Person's Aadhaar
+		BankAccount bk = new BankAccount(1_90_000.,"savings"); //person's bankaccount
+		Person person1 = new Person("Digvijay","chinnu7j@gmail.com",aadhaar,List.of(bk)); //creating person's object
 		bk.setPerson(person1);
 		aadhaar.setPerson(person1);
-//		is.register(person1);
 		
-		is.withdraw(1, 90_000.);
+		
+//		ipersonService.register(person1);
+		
+//		ipersonService.withdraw(123712, 90_000.);
+		
+		ipersonService.deposit(123712, 20_000.);
 	}
 
 }
